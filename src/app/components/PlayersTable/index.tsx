@@ -15,37 +15,26 @@ import {
   IconButton,
 } from "@mui/material";
 import { Edit as EditIcon, Delete as DeleteIcon } from "@mui/icons-material";
-import { fetchTeams } from "../../services/api";
+import { fetchPlayers } from "../../services/api";
 import Link from "next/link";
 
-
-interface TeamData {
+interface PlayerData {
   id: number;
-  logo: string;
+  profilepic: string;
   name: string;
-  players: number;
+  teamId: number;
 }
 
 function createData(
   id: number,
-  logo: string,
+  profilepic: string,
   name: string,
-  players: number
-): TeamData {
-  return { id, logo, name, players };
+  teamId: number
+): PlayerData {
+  return { id, profilepic, name, teamId };
 }
 
 type Order = "asc" | "desc";
-
-function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
-  if (b[orderBy] < a[orderBy]) {
-    return -1;
-  }
-  if (b[orderBy] > a[orderBy]) {
-    return 1;
-  }
-  return 0;
-}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getComparator<Key extends keyof any>(
@@ -60,17 +49,32 @@ function getComparator<Key extends keyof any>(
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
+function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
+    const valueA = typeof a[orderBy] === 'string' && !isNaN(Number(a[orderBy])) ? Number(a[orderBy]) : a[orderBy];
+    const valueB = typeof b[orderBy] === 'string' && !isNaN(Number(b[orderBy])) ? Number(b[orderBy]) : b[orderBy];
+  
+    if (valueB < valueA) {
+      return -1;
+    }
+    if (valueB > valueA) {
+      return 1;
+    }
+    return 0;
+  }
+  
+  
+
 interface HeadCell {
-  id: keyof TeamData;
+  id: keyof PlayerData;
   label: string;
   numeric: boolean;
 }
 
 const headCells: readonly HeadCell[] = [
-  { id: "logo", numeric: false, label: "Logo" },
+  { id: "profilepic", numeric: false, label: "Logo" },
   { id: "id", numeric: true, label: "ID" },
   { id: "name", numeric: false, label: "Nome" },
-  { id: "players", numeric: false, label: "Quantidade de jogadores" },
+  { id: "teamId", numeric: true, label: "Time" },
 ];
 
 interface EnhancedTableProps {
@@ -78,14 +82,14 @@ interface EnhancedTableProps {
   orderBy: string;
   onRequestSort: (
     event: React.MouseEvent<unknown>,
-    property: keyof TeamData
+    property: keyof PlayerData
   ) => void;
 }
 
 function EnhancedTableHead(props: EnhancedTableProps) {
   const { order, orderBy, onRequestSort } = props;
   const createSortHandler =
-    (property: keyof TeamData) => (event: React.MouseEvent<unknown>) => {
+    (property: keyof PlayerData) => (event: React.MouseEvent<unknown>) => {
       onRequestSort(event, property);
     };
 
@@ -112,23 +116,23 @@ function EnhancedTableHead(props: EnhancedTableProps) {
   );
 }
 
-export default function TeamsTable() {
+export default function PlayersTable() {
   const [order, setOrder] = useState<Order>("asc");
-  const [orderBy, setOrderBy] = useState<keyof TeamData>("id");
+  const [orderBy, setOrderBy] = useState<keyof PlayerData>("id");
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [rows, setRows] = useState<TeamData[]>([]);
+  const [rowsPerPage, setRowsPerPage] = useState(7);
+  const [rows, setRows] = useState<PlayerData[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const teams = await fetchTeams();
-        const teamData = teams.map((team: Team) =>
-          createData(team.id, team.image, team.name, team.players.length)
+        const players = await fetchPlayers();
+        const playerData = players.map((player: Player) =>
+          createData(player.id, player.profilepic, player.name, player.teamId)
         );
-        setRows(teamData);
+        setRows(playerData);
       } catch (error) {
-        console.error("Error fetching teams:", error);
+        console.error("Erro ao buscar jogadores:", error);
       }
     };
 
@@ -137,7 +141,7 @@ export default function TeamsTable() {
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
-    property: keyof TeamData
+    property: keyof PlayerData
   ) => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
@@ -177,35 +181,33 @@ export default function TeamsTable() {
             <TableBody>
               {visibleRows.map((row) => (
                 <TableRow hover tabIndex={-1} key={row.id}>
-                    <TableCell>
-                      <img
-                        src={row.logo}
-                        alt={`${row.name} logo`}
-                        className="rounded-full object-cover w-12 h-12"
-                      />
-                    </TableCell>
-                    <TableCell>{row.id}</TableCell>
-                    <TableCell><Link href={`/times/${row.id}`}>{row.name}</Link></TableCell>
-                    <TableCell>
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Box sx={{ ml: 1 }}>{row.players} jogadores</Box>
-                      </Box>
-                    </TableCell>
-                    <TableCell align="right">
-                      <IconButton>
-                        <EditIcon />
-                      </IconButton>
-                      <IconButton>
-                        <DeleteIcon />
-                      </IconButton>
-                    </TableCell>
+                  <TableCell>
+                    <img
+                      src={row.profilepic}
+                      alt={`${row.name} profile`}
+                      className="rounded-full object-cover w-12 h-12"
+                    />
+                  </TableCell>
+                  <TableCell>{row.id}</TableCell>
+                  <TableCell>
+                    <Link href={`/jogadores/${row.id}`}>{row.name}</Link>
+                  </TableCell>
+                  <TableCell>{row.teamId}</TableCell>
+                  <TableCell align="right">
+                    <IconButton>
+                      <EditIcon />
+                    </IconButton>
+                    <IconButton>
+                      <DeleteIcon />
+                    </IconButton>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={[7]}
           component="div"
           count={rows.length}
           rowsPerPage={rowsPerPage}

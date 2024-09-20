@@ -1,0 +1,227 @@
+{
+    "players": [
+      {
+        "id": 1,
+        "name": "Cristiano Ronaldo",
+        "age": 40,
+        "teamId": 1,
+        "profilepic": "https://publish-p47754-e237306.adobeaemcloud.com/adobe/dynamicmedia/deliver/dm-aid--914bcfe0-f610-4610-a77e-6ea53c53f630/_330603286208.app.webp?preferwebp=true&width=312",
+        "createdAt": "2024-09-01T10:00:00Z",
+        "updatedAt": "2024-09-10T15:00:00Z"
+      },
+      {
+        "id": 2,
+        "name": "Lionel Messi",
+        "age": 37,
+        "teamId": 2,
+        "profilepic": "https://upload.wikimedia.org/wikipedia/commons/1/18/Lionel-Messi-Argentina-2022-FIFA-World-Cup_sharpness.jpg",
+        "createdAt": "2024-09-02T11:00:00Z",
+        "updatedAt": "2024-09-11T16:00:00Z"
+      },
+      {
+        "id": 3,
+        "name": "Neymar Jr",
+        "age": 32,
+        "teamId": 2,
+        "profilepic": "https://estaticos-cdn.prensaiberica.es/clip/01a51bd4-5b1e-45f3-bcbf-3d4bcc209e48_alta-libre-aspect-ratio_default_0.jpg",
+        "createdAt": "2024-09-12T10:00:00Z",
+        "updatedAt": "2024-09-12T10:00:00Z"
+      },
+      {
+        "id": 4,
+        "name": "Kylian Mbappé",
+        "age": 25,
+        "teamId": 2,
+        "profilepic": "https://digitalextremadura.com/wp-content/uploads/2021/08/mbape.jpg",
+        "createdAt": "2024-09-12T12:00:00Z",
+        "updatedAt": "2024-09-12T12:00:00Z"
+      },
+      {
+        "id": 5,
+        "name": "Luka Modrić",
+        "age": 38,
+        "teamId": 1,
+        "profilepic": "https://lncimg.lance.com.br/cdn-cgi/image/width=828,quality=75,fit=pad,format=webp/uploads/2024/04/AFP__20240110__34E833Y__v1__HighRes__FblKsaEspSuperCupRealMadridAtleticoMadrid-scaled-aspect-ratio-512-320.jpg",
+        "createdAt": "2024-09-05T09:00:00Z",
+        "updatedAt": "2024-09-06T13:00:00Z"
+      },
+      {
+        "id": 6,
+        "name": "Karim Benzema",
+        "age": 36,
+        "teamId": 1,
+        "profilepic": "https://publish-p47754-e237306.adobeaemcloud.com/adobe/dynamicmedia/deliver/dm-aid--d87c0847-5443-4641-9e08-7425288a549c/_330830945339.app.webp?preferwebp=true&width=312",
+        "createdAt": "2024-09-01T10:00:00Z",
+        "updatedAt": "2024-09-10T15:00:00Z"
+      },
+      {
+        "id": 7,
+        "name": "Eden Hazard",
+        "age": 33,
+        "teamId": 1,
+        "profilepic": "https://conteudo.imguol.com.br/c/esporte/4f/2022/12/07/eden-hazard-disputou-seu-ultimo-jogo-pela-belgica-em-partida-contra-a-croacia-na-copa-do-mundo-do-qatar-1670411702623_v2_3x4.jpg",
+        "createdAt": "2024-09-07T08:30:00Z",
+        "updatedAt": "2024-09-07T08:30:00Z"
+      },
+      {
+        "id": 8,
+        "name": "Virgil van Dijk",
+        "age": 32,
+        "teamId": 3,
+        "profilepic": "https://i.eurosport.com/2023/03/31/3672473-74758388-2560-1440.jpg",
+        "createdAt": "2024-09-08T09:00:00Z",
+        "updatedAt": "2024-09-08T09:30:00Z"
+      },
+      {
+        "id": 9,
+        "name": "Mohamed Salah",
+        "age": 31,
+        "teamId": 3,
+        "profilepic": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/10/salah.png?w=1022",
+        "createdAt": "2024-09-09T10:00:00Z",
+        "updatedAt": "2024-09-10T10:30:00Z"
+      },
+      {
+        "id": 10,
+        "name": "Kevin De Bruyne",
+        "age": 33,
+        "teamId": 4,
+        "profilepic": "https://assets.goal.com/images/v3/blt9f731d15f08d02a3/Kevin%20De%20Bruyne%20Manchester%20City%202024.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "createdAt": "2024-09-10T11:00:00Z",
+        "updatedAt": "2024-09-11T12:00:00Z"
+      },
+      {
+        "id": 11,
+        "name": "Raheem Sterling",
+        "age": 29,
+        "teamId": 4,
+        "profilepic": "https://imageio.forbes.com/specials-images/imageserve/66d2bfc94de4b775422c2e51/Arsenal-Unveil-New-Signing-Raheem-Sterling/0x0.jpg?format=jpg&crop=1642,1232,x0,y115,safe&width=960",
+        "createdAt": "2024-09-12T14:00:00Z",
+        "updatedAt": "2024-09-12T14:30:00Z"
+      },
+      {
+        "id": 12,
+        "name": "Sergio Ramos",
+        "age": 37,
+        "teamId": 5,
+        "profilepic": "https://s2-oglobo.glbimg.com/d3W6BqJBXQEsfFgBDJwlkWCihu0=/0x0:630x615/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/d/0/eCD5TSQtWoECUfoO2BxQ/sergio-ramos.png",
+        "createdAt": "2024-09-12T15:00:00Z",
+        "updatedAt": "2024-09-13T16:00:00Z"
+      },
+      {
+        "id": 13,
+        "name": "Robert Lewandowski",
+        "age": 35,
+        "teamId": 5,
+        "profilepic": "https://assets.goal.com/images/v3/blta85742c74948584c/bc6827ee9b5376638df7b2a487c534bc3d576bdb.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+        "createdAt": "2024-09-13T17:00:00Z",
+        "updatedAt": "2024-09-14T18:00:00Z"
+      },
+      {
+        "id": 14,
+        "name": "Erling Haaland",
+        "age": 24,
+        "teamId": 4,
+        "profilepic": "https://www.mancity.com/meta/media/nthb2hil/haaland-signs.jpg",
+        "createdAt": "2024-09-14T19:00:00Z",
+        "updatedAt": "2024-09-14T19:30:00Z"
+      },
+      {
+        "id": 15,
+        "name": "Phil Foden",
+        "age": 23,
+        "teamId": 4,
+        "profilepic": "https://tntsports.com.br/__export/1651014647646/sites/esporteinterativo/img/2022/04/26/foden_metendo_a_mala.jpg",
+        "createdAt": "2024-09-14T20:00:00Z",
+        "updatedAt": "2024-09-14T20:30:00Z"
+      },
+      {
+        "id": 16,
+        "name": "Trent Alexander-Arnold",
+        "age": 25,
+        "teamId": 3,
+        "profilepic": "https://media.cnn.com/api/v1/images/stellar/prod/220804093610-01-trent-alexander-arnold-file.jpg?c=original",
+        "createdAt": "2024-09-14T21:00:00Z",
+        "updatedAt": "2024-09-14T21:30:00Z"
+      },
+      {
+        "id": 17,
+        "name": "Alisson Becker",
+        "age": 31,
+        "teamId": 3,
+        "profilepic": "https://static1.purepeople.com.br/articles/8/31/22/28/@/3529812-pai-de-alisson-sofre-afogamento-e-morre-580x580-2.jpg",
+        "createdAt": "2024-09-14T22:00:00Z",
+        "updatedAt": "2024-09-14T22:30:00Z"
+      },
+      {
+        "id": 18,
+        "name": "Sadio Mané",
+        "age": 32,
+        "teamId": 3,
+        "profilepic": "https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/13/thumb_112237_default_news_size_5.jpeg",
+        "createdAt": "2024-09-15T09:00:00Z",
+        "updatedAt": "2024-09-15T09:30:00Z"
+      },
+      {
+        "id": 19,
+        "name": "Gerard Piqué",
+        "age": 37,
+        "teamId": 5,
+        "profilepic": "https://s2-quem.glbimg.com/wmli8M2PSqQ61TU_dofEkJWfj7k=/0x0:424x388/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2022/J/C/OIU6RiR6m5UCrSFNBHBA/2020-01-29-gerard-pique.jpeg",
+        "createdAt": "2024-09-15T10:00:00Z",
+        "updatedAt": "2024-09-15T11:00:00Z"
+      },
+      {
+        "id": 20,
+        "name": "Andrés Iniesta",
+        "age": 40,
+        "teamId": 5,
+        "profilepic": "https://tmssl.akamaized.net//images/foto/galerie/andres-iniesta-vissel-kobe-1656582263-87739.jpg?lm=1656582297",
+        "createdAt": "2024-09-15T12:00:00Z",
+        "updatedAt": "2024-09-15T13:00:00Z"
+      }
+    ],
+    "teams": [
+      {
+        "id": 1,
+        "name": "Real Madrid",
+        "players": [1, 5, 6, 7],
+        "image": "https://static.brusheezy.com/system/resources/previews/000/014/339/original/real-madrid-logo-photoshop-psds.jpg",
+        "createdAt": "2024-08-01T10:00:00Z",
+        "updatedAt": "2024-09-01T12:00:00Z"
+      },
+      {
+        "id": 2,
+        "name": "Paris Saint-Germain",
+        "players": [2, 3, 4],
+        "image": "https://upload.wikimedia.org/wikipedia/pt/d/d2/Logo_PSG.png",
+        "createdAt": "2024-08-05T09:00:00Z",
+        "updatedAt": "2024-09-05T13:00:00Z"
+      },
+      {
+        "id": 3,
+        "name": "Liverpool",
+        "players": [8, 9, 16, 17, 18],
+        "image": "https://www.futbox.com/img/v1/9c4/4a0/3c5/e3f/e8ef093be708a0aabbf3.png",
+        "createdAt": "2024-08-10T08:00:00Z",
+        "updatedAt": "2024-09-10T12:00:00Z"
+      },
+      {
+        "id": 4,
+        "name": "Manchester City",
+        "players": [10, 11, 14, 15],
+        "image": "https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2015/12/mcfc-new-crest0.png?fit=1060%2C596&ssl=1",
+        "createdAt": "2024-08-15T07:00:00Z",
+        "updatedAt": "2024-09-15T11:00:00Z"
+      },
+      {
+        "id": 5,
+        "name": "Barcelona",
+        "players": [12, 13, 19, 20],
+        "image": "https://logo.criativoon.com/wp-content/uploads/2019/10/logo-barcelona-1024x576.jpg",
+        "createdAt": "2024-08-20T09:00:00Z",
+        "updatedAt": "2024-09-20T13:00:00Z"
+      }
+    ]
+  }
+  
