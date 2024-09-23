@@ -9,7 +9,9 @@ export default function Jogadores() {
       <Link href="/" className="text-zinc-600">{"< voltar"}</Link>
       <div className="flex items-center justify-between">
         <h1 className="my-5 font-bold">Jogadores</h1>
-        <Button variant="contained" className="flex items-center gap-2"><IconPlus />ADICIONAR JOGADOR</Button>
+        <Link href="/jogadores/novo">
+          <Button variant="contained" className="flex items-center gap-2"><IconPlus />ADICIONAR JOGADOR</Button>
+        </Link>
       </div>
       <PlayersTable />
     </div>
